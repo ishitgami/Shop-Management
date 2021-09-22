@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +11,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../js/jquery.validate.min.js"></script>
+
+    <style>
+        .header {
+            height: 10%;
+        }
+        .customer{
+            height: 90%;
+        }
+
+    </style>
 </head>
 
 <script>
@@ -19,10 +30,11 @@
 </script>
 
 </head>
+
 <body>
     <?php
     require '../connection.php';
-    require '../header.php';
+ 
     require './addcustomer/addcustomer.php';
     require './upadate/update_form.php';
     ?>
@@ -30,14 +42,17 @@
     <div id="snackbar">Customer Add Sucessfully</div>
     <div id="snackbar1">Customer Delete Sucessfully</div>
     <div id="snackbar2">Customer Save Sucessfully</div>
-
-    <div class="heading_customer">
-        <h1 style="padding-top: 15px;">Customer Details</h1>
-        <input height="25px" style="margin-left:55%; margin-top:30px; height: 35px;" class="search-box" type="text" autocomplete="off" placeholder="Search by name" />
-        <button id="myBtn" class=" btn btn-primary" style="margin-left:1%; margin-top:30px; height: 35px;">Add Customer</button>
+    <div>
+    <div class="header">
+        <?php require '../header.php'; ?>
     </div>
-    <div class="showtable">
-    </div>
+    <div class="customer">
+        <div class="heading_customer">
+            <h1 style="padding-top: 15px;">Customer Details</h1>
+            <!-- <input height="25px" style="margin-left:55%; margin-top:30px; height: 35px;" class="search-box" type="text" autocomplete="off" placeholder="Search by name" /> -->
+            <button id="myBtn" class=" btn btn-primary" style="margin-left:70%; margin-top:30px; height: 35px;">Add Customer</button>
+        </div>
+        <div class="showtable"></div>
     </div>
 
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"> </script>
@@ -221,7 +236,6 @@
                 modal.style.display = "none";
             }
         }
-
     </script>
 </body>
 
